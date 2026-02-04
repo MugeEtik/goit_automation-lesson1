@@ -8,7 +8,7 @@ The project is organized into logical modules to demonstrate a clear learning pa
 
 ### 🎓 01-Homeworks
 - **HW-14:** Initial E2E test scenarios.
-- **HW-15 to HW-19:** Upcoming homework assignments for POM, API, Performance, and BDD.
+- **HW-15 to HW-19:** Upcoming homework assignments for POM, API, Performance, CI/CD, and BDD.
 
 ### 📚 02-Lessons
 - **01-Basics:** Understanding Cypress folder structure and basic commands.
