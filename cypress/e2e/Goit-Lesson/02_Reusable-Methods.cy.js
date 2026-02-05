@@ -1,5 +1,5 @@
 describe ('TS2_Reusable Methods', function() {
-//commands.js klasörüne eklediğimiz resuable methodları burada kullanabiliriz. 
+//we can use reusable methods that we added commands.js files.
 
   beforeEach(() => {
     cy.visit("https://www.edu.goit.global/account/login");

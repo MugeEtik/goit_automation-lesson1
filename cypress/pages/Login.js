@@ -2,20 +2,21 @@ export class LoginPage {
 
 // 1. LOCATORS (Using Getter methods for better readability and maintenance)
 
+  get URL() { return "https://www.edu.goit.global/account/login"; }
   get titleField() {return cy.get(".next-10stgr7 > .next-c1vj7d"); }
   get emailField() {return cy.get("#user_email"); }
   get passwordField() {return cy.get("#user_password"); }
   get loginButton() {return cy.get(".next-1jphuq5"); }
   get forgotPasswordLink() {return cy.get(".next-1f1fv1i > .next-1qrvie4"); }
 
-    // New Locator for error messages (Update the class if it differs in your LMS)
+    /*New Locator for error messages (Update the class if it differs in your LMS)*/
   get errorMessage() { return cy.get(".next-19idv66"); }
 
 // 2. ACTIONS (Methods to perform flows)
 
   navigateURL() {
     // Navigates to the GoIT LMS login page
-    cy.visit("https://www.edu.goit.global/account/login"); }
+    cy.visit(this.URL); }
 
   login(email, password) {
     // Standard login flow
@@ -58,3 +59,5 @@ export class LoginPage {
     this.errorMessage.should("be.visible").and("have.text", expectedMessage); }
 
   }
+
+// Legacy approach with hardcoded locators is replaced by modern Getter methods for better maintainability.

@@ -19,7 +19,7 @@ describe("Page Object Model (POM) - Advanced Approach", () => {
     loginPage.verifyTitle();
     loginPage.verifyInputs();
     loginPage.verifyLoginButton();
-    loginPage.verifyForgotPasswordLink();
+    loginPage.verifyForgotPasswordLink(); 
 
   });
 
