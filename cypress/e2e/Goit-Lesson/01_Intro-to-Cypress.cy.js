@@ -1,9 +1,7 @@
-//"cy" is the main cypress test library's core command.
-//how to express functions in javascript:
+// "cy" is the main cypress test library's core command.
+// how to express functions in javascript:
 /*
--  function()  
-OR  
--    () =>  
+  function()     OR         () => 
 */
 
 describe ('TS1_Cypress Fundamentals', function() {

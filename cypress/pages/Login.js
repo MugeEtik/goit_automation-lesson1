@@ -43,7 +43,7 @@ export class LoginPage {
     // Verifies the link for password recovery
     this.forgotPasswordLink.should("be.visible").and("have.text", "I can't remember the password"); }
 
-    OR;
+//OR; 
 
   verifyPageElements() {
     // Verifies all critical UI components are visible and correct
