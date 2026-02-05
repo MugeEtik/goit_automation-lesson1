@@ -52,7 +52,7 @@ export class LoginPage {
     this.emailField.should("be.visible");
     this.passwordField.should("be.visible");
     this.loginButton.should("be.visible").and("have.text", "Log in");
-    this.forgotPasswordLink.should("be.visible");
+    this.forgotPasswordLink.should("be.visible").and("have.text", "I can't remember the password");
   }
 
   verifyErrorMessage(expectedMessage) {
