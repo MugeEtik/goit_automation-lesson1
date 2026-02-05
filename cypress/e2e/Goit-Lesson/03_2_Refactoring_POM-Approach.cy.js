@@ -3,19 +3,24 @@
 
 import { LoginPage } from "../../pages/Login";
 
-describe("Page Object Model - POM", () => {
+describe("Page Object Model (POM) - Advanced Approach", () => {
 
-  it("TC02 - Page Object Pattern", () => {
+  it("TC02 - Verify all elements on Login Page using Page Object Pattern", () => {
 
-const loginPage = new LoginPage();  // import the login page class and create an instance
-//Use the methods from the login page class to perform actions and assertions
+    const loginPage = new LoginPage();  
 
+// import the login page class and create an instance
+// use the methods from the LoginPage class to perform actions and assertions
+
+    // Step 1: Navigation
     loginPage.navigateURL();
-    loginPage.checkTitle();
-    loginPage.checkInputs();
-    loginPage.checkLoginButton();
-    loginPage.checkForgotPasswordLink();
 
-  });  
+    // Step 2: Validating UI Elements (Assertions)
+    loginPage.verifyTitle();
+    loginPage.verifyInputs();
+    loginPage.verifyLoginButton();
+    loginPage.verifyForgotPasswordLink();
 
-})
+  });
+
+});

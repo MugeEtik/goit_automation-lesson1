@@ -1,36 +1,60 @@
-export class LoginPage{
+export class LoginPage {
 
-    navigateURL(){
-    cy.visit("https://www.edu.goit.global/account/login");
-    } 
+// 1. LOCATORS (Using Getter methods for better readability and maintenance)
 
-    //method to check title
-checkTitle(){
-    cy.get(".next-10stgr7 > .next-c1vj7d")
-    .should("be.visible")
-    .and("have.text", "Login");
-    }
+  get titleField() {return cy.get(".next-10stgr7 > .next-c1vj7d"); }
+  get emailField() {return cy.get("#user_email"); }
+  get passwordField() {return cy.get("#user_password"); }
+  get loginButton() {return cy.get(".next-1jphuq5"); }
+  get forgotPasswordLink() {return cy.get(".next-1f1fv1i > .next-1qrvie4"); }
 
-    //method to check email and password inputs
-checkInputs(){
-    cy.get("#user_email").should("be.visible");
-    cy.get("#user_password").should("be.visible");
-    }
+    // New Locator for error messages (Update the class if it differs in your LMS)
+  get errorMessage() { return cy.get(".next-19idv66"); }
 
-    //method to check login button
-checkLoginButton(){
-    cy.get(".next-1jphuq5")
-    .should("be.visible")
-    .and("have.text", "Log in")
-    .and("exist");
-    }
+// 2. ACTIONS (Methods to perform flows)
 
-    //method to check forgot password link
-checkForgotPasswordLink(){
-    cy.get(".next-1f1fv1i > .next-1qrvie4")
-    .should("be.visible")
-    .and("have.text", "I can't remember the password");
-    }
-}
+  navigateURL() {
+    // Navigates to the GoIT LMS login page
+    cy.visit("https://www.edu.goit.global/account/login"); }
 
-// export default new LoginPage(); // export the class as a singleton instance
+  login(email, password) {
+    // Standard login flow
+    this.emailField.clear().type(email); // Clear before typing for reliability
+    this.passwordField.clear().type(password);
+    this.loginButton.click();
+  }
+
+// 3. ASSERTIONS (Methods to perform checks/assertions-The Verification Layer)
+
+  verifyTitle() {
+    // Verifies title visibility and exact text content
+    this.titleField.should("be.visible").and("have.text", "Login"); }
+
+  verifyInputs() {
+    // Verifies that credentials fields are visible
+    this.emailField.should("be.visible");
+    this.passwordField.should("be.visible"); }
+
+  verifyLoginButton() {
+    // Verifies login button state and labeling
+    this.loginButton.should("be.visible").and("have.text", "Log in"); }
+
+  verifyForgotPasswordLink() {
+    // Verifies the link for password recovery
+    this.forgotPasswordLink.should("be.visible").and("have.text", "I can't remember the password"); }
+
+    OR;
+
+  verifyPageElements() {
+    // Verifies all critical UI components are visible and correct
+    this.titleField.should("be.visible").and("have.text", "Login");
+    this.emailField.should("be.visible");
+    this.passwordField.should("be.visible");
+    this.loginButton.should("be.visible").and("have.text", "Log in");
+    this.forgotPasswordLink.should("be.visible");
+  }
+
+  verifyErrorMessage(expectedMessage) {
+    this.errorMessage.should("be.visible").and("have.text", expectedMessage); }
+
+  }
