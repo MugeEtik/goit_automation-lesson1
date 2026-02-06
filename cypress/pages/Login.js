@@ -1,6 +1,6 @@
 export class LoginPage {
 
-// 1. LOCATORS (Using Getter methods for better readability and maintenance)
+// 1. LOCATORS (Using Getter methods for better readability and maintenance - high-level abstraction)
 
   get URL() { return "https://www.edu.goit.global/account/login"; }
   get titleField() {return cy.get(".next-10stgr7 > .next-c1vj7d"); }
