@@ -8,11 +8,6 @@ context('hw-15 login and logout tests with Page Object Pattern Implementation', 
   const loginPage = new LoginPage();
   const homePage = new HomePage();
 
-   it.skip("Should navigate to login page", () => {
-    //1. Navigate
-    loginPage.navigateURL();
-   });
-
    it("Should login, verify home page elements, scroll, and logout", () => {
     
     //1. Navigate
