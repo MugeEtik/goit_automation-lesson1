@@ -6,6 +6,13 @@ This repository is a comprehensive showcase of my end-to-end automation journey 
 
 The project is organized into logical modules to demonstrate a clear learning path:
 
+cypress/
+├── e2e/
+│   └── Goit-Homework/   # Test scripts
+├── pages/               # Page Object classes (POM)
+├── support/             # Custom commands & global configuration
+└── fixtures/            # Static test data
+
 ### 🎓 01-Homeworks
 - **HW-14:** Initial E2E test scenarios.
 - **HW-15 (Page Object Model):** Advanced refactoring of previous E2E test scenarios into a professional POM architecture. This module demonstrates the transition from standard scripting to an encapsulated framework, utilizing Getter methods and Page Classes to enhance maintainability and decouple test logic from UI elements.
