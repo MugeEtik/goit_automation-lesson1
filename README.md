@@ -1,4 +1,4 @@
-# GoIT Cypress Automation Master Project 🚀
+# GoIT Cypress Automation Lesson Notes and Homeworks 🚀
 
 This repository is a comprehensive showcase of my end-to-end automation journey at GoIT. It follows a professional modular architecture, covering everything from basic UI testing to advanced concepts like POM, API, and CI/CD.
 
