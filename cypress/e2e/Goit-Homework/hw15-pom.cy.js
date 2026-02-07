@@ -10,8 +10,9 @@ context('hw-15 login and logout tests with Page Object Pattern Implementation', 
 
    it("Should login, verify home page elements, scroll, and logout", () => {
     
-    //1. Navigate
+    //1. Navigate and verify LoginPage elements
     loginPage.navigateURL();
+    loginPage.verifyPageElements(); // Comprehensive check for all critical UI components
     
     // 2. Login action
     loginPage.login("user888@gmail.com", "1234567890");
@@ -31,5 +32,3 @@ context('hw-15 login and logout tests with Page Object Pattern Implementation', 
   });
 });
 });
-
-
