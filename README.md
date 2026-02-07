@@ -26,6 +26,34 @@ The project is organized into logical modules to demonstrate a clear learning pa
 - **Version Control:** Git (Conventional Commits)
 - **Methodology:** TDD & BDD
 
+## 🚀 Getting Started (Clone -> Install -> Run)
+
+Follow these steps to clone the repository and run the automation suite locally.
+
+### 📋 Prerequisites
+Ensure you have the following installed on your machine:
+* **Node.js** (LTS version recommended)
+* **npm** (comes with Node.js)
+
+### 📥 Installation & Execution
+1. **Clone the repository:**
+   git clone https://github.com/MugeEtik/goit_cypress-automation.git
+
+2. **Navigate to the project directory:**
+   cd goit_cypress-automation
+
+3. **Install dependencies:**
+   npm install
+
+### 🧪 Running Tests
+You can run the tests in two different modes:
+
+* **UI Mode (Cypress Test Runner):** Best for debugging in real-time.
+  `npx cypress open`
+
+* **Headless Mode (CLI):** Ideal for CI/CD pipelines and quick execution.
+  `npx cypress run`
+
 ## 💡 Quality Insight
 This project is built with **maintainability** in mind. By separating Page Objects from Test Scripts, we ensure that our automation suite remains robust and easy to update as the application evolves.
 
